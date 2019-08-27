@@ -39,6 +39,11 @@
       <artifactId>netty-all</artifactId>
       <version>4.1.22.Final</version>
     </dependency>
+      <dependency>
+          <groupId>org.apache.kafka</groupId>
+          <artifactId>kafka-clients</artifactId>
+          <version>0.10.1.1</version>
+      </dependency>
 
   </dependencies>
 
