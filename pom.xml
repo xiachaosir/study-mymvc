@@ -45,6 +45,20 @@
           <version>0.10.1.1</version>
       </dependency>
 
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>5.2.1.RELEASE</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.daojia.spat</groupId>
+      <artifactId>com.daojia.spat.djedis</artifactId>
+      <version>1.0.2-SNAPSHOT</version>
+    </dependency>
+
+
   </dependencies>
 
   <build>

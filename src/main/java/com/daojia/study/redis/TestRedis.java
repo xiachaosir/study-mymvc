@@ -1,6 +1,5 @@
 package com.daojia.study.redis;
 
-import redis.clients.jedis.Jedis;
 
 /**
  * @author xiachao
