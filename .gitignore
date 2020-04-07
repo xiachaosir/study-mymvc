@@ -1,0 +1,43 @@
+# kdiff3 ignore
+*.orig
+
+# maven ignore
+target/
+
+# eclipse ignore
+.classpath
+*.class
+*~
+*.classpath
+*.iml
+*.ide
+.settings/
+.project
+/target/
+
+# idea ignore
+.idea/
+*.ipr
+*.iws
+
+# temp ignore
+*.log
+*.cache
+*.diff
+*.patch
+*.tmp
+
+# system ignore
+.DS_Store
+Thumbs.db
+
+# package ignore (optional)
+# *.jar
+# *.war
+# *.zip
+# *.tar
+# *.tar.gz
+/bin/
+
+#auto merge shell
+merge.sh

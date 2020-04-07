@@ -1,9 +1,7 @@
 package com.daojia.study.utils;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by xiachao on 2018/8/8 10:59
@@ -14,7 +12,16 @@ public class StringUtil {
 
     public static void main(String[] args) {
 
-        List<String> list = Arrays.asList("1");
+        HashMap<Integer, String> hashMap = new HashMap();
+        hashMap.put(3,"A");
+        hashMap.put(7,"B");
+        hashMap.put(5, "C");
+
+        for (Map.Entry<Integer, String> entry : hashMap.entrySet()) {
+            System.out.println("key = " + entry.getKey() + ",value=" + entry.getValue());
+        }
+
+       /* List<String> list = Arrays.asList("1");
         Object[] objects = list.toArray();
         if (objects.getClass() == Object[].class) {
             System.out.println("true");
@@ -26,7 +33,7 @@ public class StringUtil {
 
         objects[0] = new String();
 
-        System.out.println(objects);
+        System.out.println(objects);*/
 
 
         /*String str1 = "abcd";//先检查字符串常量池中有没有"abcd"，如果字符串常量池中没有，则创建一个，然后 str1 指向字符串常量池中的对象，如果有，则直接将 str1 指向"abcd""；
