@@ -52,12 +52,12 @@
       <version>5.2.1.RELEASE</version>
     </dependency>
 
-    <dependency>
+   <!-- <dependency>
       <groupId>com.daojia.spat</groupId>
       <artifactId>com.daojia.spat.djedis</artifactId>
       <version>1.0.2-SNAPSHOT</version>
     </dependency>
-
+-->
 
   </dependencies>
 

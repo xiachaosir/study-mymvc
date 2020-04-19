@@ -1,13 +1,16 @@
+/*
 package com.daojia.study.redis;
 
 import redis.clients.jedis.Jedis;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
+*/
 /**
  * @author xiachao
  * @date 2019/8/29 11:43
- */
+ *//*
+
 public class TaskProducer{
 
     private static volatile Jedis jedis = new Jedis("192.168.189.128", 6379);
@@ -18,9 +21,11 @@ public class TaskProducer{
 
     }
 
-    /*public TaskProducer(Jedis jedis) {
+    */
+/*public TaskProducer(Jedis jedis) {
         this.jedis = jedis;
-    }*/
+    }*//*
+
 
     public static void addWorks() {
         String taskValue = String.valueOf(value.getAndIncrement());
@@ -36,3 +41,4 @@ public class TaskProducer{
         }
     }
 }
+*/

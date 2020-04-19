@@ -1,19 +1,24 @@
+/*
 package com.daojia.study.redis;
 
 import redis.clients.jedis.Jedis;
 
+*/
 /**
  * @author xiachao
  * @date 2019/8/29 11:43
- */
+ *//*
+
 public class TaskCustomer {
 
     private static volatile Jedis jedis = new Jedis("192.168.189.128", 6379);
 
-    /*public TaskCustomer(Jedis jedis) {
+    */
+/*public TaskCustomer(Jedis jedis) {
         this.jedis = jedis;
     }
-*/
+*//*
+
     public static void custom() {
         while (true) {
             String taskId = jedis.rpoplpush("task-queue", "tmp-queue");
@@ -34,3 +39,4 @@ public class TaskCustomer {
         }
     }
 }
+*/

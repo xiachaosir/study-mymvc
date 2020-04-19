@@ -1,23 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="861ee3cb-50ef-4953-9dcc-dde1a6a768d9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/daojia/study/countDownLatch/TestCountDownLAtch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/daojia/study/countDownLatch/TestCountDownLatch2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/study_mymvc_war.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/study_mymvc_war.xml" afterDir="false" />
+    <list default="true" id="315488d8-f77b-4c60-8eb7-7cbf814dff32" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/daojia/study/algorithm/listnode/ListNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/study_mymvc_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/study_mymvc_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/daojia/study/netty/NettyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/daojia/study/netty/NettyServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/daojia/study/redis/JedisUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/daojia/study/redis/JedisUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/daojia/study/redis/RedisLock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/daojia/study/redis/RedisLock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/daojia/study/redis/TaskCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/daojia/study/redis/TaskCustomer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/daojia/study/redis/TaskProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/daojia/study/redis/TaskProducer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/daojia/study/redis/TestRedis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/daojia/study/redis/TestRedis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/daojia/study/utils/StringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/daojia/study/utils/StringUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/netty/NettyServer$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/daojia/study/netty/NettyServer$1$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/netty/NettyServer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/daojia/study/netty/NettyServer$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/netty/NettyServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/daojia/study/netty/NettyServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/utils/StringUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/daojia/study/utils/StringUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/A.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/algorithm/AlgorithmTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/annotation/MyController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/annotation/MyRequestMapping.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/annotation/MyRequestParam.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/controller/IndexController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/domain/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/kafka/ConsumerDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/kafka/ProducerDemo$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/kafka/ProducerDemo$NameTreadFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/kafka/ProducerDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/netty/NettyClient$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/netty/NettyClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/netty/NettyServer$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/netty/NettyServer$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/netty/NettyServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/nio/NIOServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/practice/A.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/practice/B.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/practice/TestFinal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/proxy/A.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/proxy/B.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/proxy/DynamicProxy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/proxy/TestProxy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/proxy/dyna/HelloDynaProxy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/proxy/dyna/TestDynamicProxy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/proxy/stat/Hello.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/proxy/stat/HelloProxy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/proxy/stat/IHello.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/proxy/stat/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/servlet/MyDispatcherServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/thread/ThreadConditionDemo$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/thread/ThreadConditionDemo$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/thread/ThreadConditionDemo$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/thread/ThreadConditionDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/thread/Worker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/tomcat/HelloWorldServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/tomcat/MyRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/tomcat/MyResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/tomcat/MyTomcat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/tomcat/Myservlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/tomcat/ServletMapping.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/tomcat/ServletMappingConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/utils/JvmTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/utils/StringUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/daojia/study/utils/TestRetry.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/study-mymvc.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/study-mymvc/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/study-mymvc/WEB-INF/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/study-mymvc/WEB-INF/classes/com/daojia/study/A.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/study-mymvc/WEB-INF/classes/com/daojia/study/annotation/MyController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/study-mymvc/WEB-INF/classes/com/daojia/study/annotation/MyRequestMapping.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/study-mymvc/WEB-INF/classes/com/daojia/study/annotation/MyRequestParam.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/study-mymvc/WEB-INF/classes/com/daojia/study/controller/IndexController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/study-mymvc/WEB-INF/classes/com/daojia/study/servlet/MyDispatcherServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/study-mymvc/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/study-mymvc/index.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,20 +88,14 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>Worker</find>
-      <find>execute(</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="D:/Program Files/apache-maven-3.3.9" />
+        <option name="mavenHome" value="D:/Program Files/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="D:\Program Files\apache-maven-3.6.3\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -53,99 +104,29 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectId" id="1ZZAiG8QeuUIe2oAtk4hElXIFuS" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="1alCzl9A3PHctgoZ0Yt59mkMzai" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573124955166" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <method>
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestCountDownLatch2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.daojia.study.countDownLatch.TestCountDownLatch2" />
-      <module name="study-mymvc" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.daojia.study.countDownLatch.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="TestNG">
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file enabled="true" id="idea.log" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.TestCountDownLatch2" />
-      </list>
-    </recent_temporary>
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="861ee3cb-50ef-4953-9dcc-dde1a6a768d9" name="Default" comment="" />
-      <created>1533125036704</created>
+      <changelist id="315488d8-f77b-4c60-8eb7-7cbf814dff32" name="Default Changelist" comment="" />
+      <created>1587301057532</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1533125036704</updated>
-      <workItem from="1533125038941" duration="150000" />
-      <workItem from="1533125228432" duration="28000" />
-      <workItem from="1572935819139" duration="1403000" />
-      <workItem from="1573031960759" duration="2740000" />
-      <workItem from="1574335908573" duration="208000" />
-      <workItem from="1577947984042" duration="3872000" />
-      <workItem from="1577956117708" duration="7477000" />
-      <workItem from="1585036372642" duration="684000" />
-      <workItem from="1585707281503" duration="628000" />
-      <workItem from="1585731154892" duration="599000" />
+      <updated>1587301057532</updated>
+      <workItem from="1587301059100" duration="197000" />
     </task>
     <servers />
   </component>
@@ -153,25 +134,13 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2120" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586241253553">
-      <screen x="1366" y="0" width="1920" height="1040" />
+    <state x="463" y="121" key="FileChooserDialogImpl" timestamp="1587301103683">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="2120" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1586241253553" />
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+    <state x="463" y="121" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1587301103683" />
+    <state x="186" y="8" key="SettingsEditor" timestamp="1587301106604">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="186" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1587301106604" />
   </component>
 </project>
