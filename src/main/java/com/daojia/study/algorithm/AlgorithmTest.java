@@ -40,12 +40,6 @@ public class AlgorithmTest {
         return fibonacciDigui(num - 1) + fibonacciDigui(num - 2);
     }
 
-
-
-
-
-
-
     public static void main(String[] args) {
         System.out.println("迭代-斐波那契数列第n个值为" + fibonacciDiedai(39));
         System.out.println("递归-斐波那契数列第n个值为" + fibonacciDigui(39));

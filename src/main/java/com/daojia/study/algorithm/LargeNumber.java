@@ -7,6 +7,13 @@ package com.daojia.study.algorithm;
 public class LargeNumber {
 
 
+    /**
+     * "123"+"456"
+     *
+     * @param m
+     * @param n
+     * @return
+     */
     public static String add(String m, String n) {
         char[] mChar = new StringBuffer(m).reverse().toString().toCharArray();
         char[] nChar = new StringBuffer(n).reverse().toString().toCharArray();
@@ -46,7 +53,7 @@ public class LargeNumber {
     }
 
 
-    public static String mul(String f , String s) {
+    public static String mul(String f, String s) {
         System.out.print("乘法：\n" + f + "*" + s + "=");
         // 获取首字符，判断是否是符号位
         char signA = f.charAt(0);
