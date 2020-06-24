@@ -1,6 +1,8 @@
 package com.daojia.study.algorithm;
 
 import java.util.Arrays;
+import java.util.PriorityQueue;
+import java.util.Queue;
 
 /**
  * @author xiachao
@@ -31,9 +33,14 @@ public class Solution {
 
 
 
+
+
+
+
     public static void main(String[] args) {
         String[] str = {"flower", "flow", "floweght"};
         System.out.println(commonPrefix(str));
+
     }
 
 

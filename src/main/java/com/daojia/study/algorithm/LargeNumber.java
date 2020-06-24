@@ -19,7 +19,6 @@ public class LargeNumber {
         char[] nChar = new StringBuffer(n).reverse().toString().toCharArray();
         int mLength = mChar.length;
         int nLength = nChar.length;
-        int maxLength = Math.max(mLength, nLength);
         int resultLength = mLength > nLength ? mLength + 1 : nLength + 1;
         int[] resultInt = new int[resultLength];
         for (int i = 0; i < resultLength; i++) {
