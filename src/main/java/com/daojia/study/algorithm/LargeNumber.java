@@ -20,20 +20,20 @@ public class LargeNumber {
         int mLength = mChar.length;
         int nLength = nChar.length;
         int resultLength = mLength > nLength ? mLength + 1 : nLength + 1;
+        int sum = 0;
         int[] resultInt = new int[resultLength];
         for (int i = 0; i < resultLength; i++) {
             int mint = i < mLength ? mChar[i] - '0' : 0;
             int nint = i < nLength ? nChar[i] - '0' : 0;
-            resultInt[i] = mint + nint;
+            sum += mint + nint;
+            resultInt[i] = sum;
+            if (sum >= 10) {
+                resultInt[i + 1] += 1;
+                resultInt[i] %= 10;
+            }
+            sum = sum / 10;
         }
 
-        //做加法  大于10  往后进位 当前位对10求余
-        for (int a = 0; a < resultLength; a++) {
-            if (resultInt[a] >= 10) {
-                resultInt[a + 1] += 1;
-                resultInt[a] %= 10;
-            }
-        }
         StringBuffer result = new StringBuffer();
         int start = resultLength - 1;
         if (resultInt[resultLength - 1] == 0) {
@@ -79,6 +79,7 @@ public class LargeNumber {
         int len = lenA + lenB;
         int[] result = new int[len];
         // 计算结果集合
+
         for (int i = 0; i < a.length; i++) {
             for (int j = 0; j < b.length; j++) {
                 result[i + j] += (int) (a[i] - '0') * (int) (b[j] - '0');
@@ -115,6 +116,88 @@ public class LargeNumber {
     }
 
     public static void main(String[] args) {
-        System.out.println(LargeNumber.mul("91", "792"));
+        //System.out.println(LargeNumber.add("1", "2"));
+        System.out.println(ip2Int("127.0.0.1"));
+        System.out.println(intToIp(16777343));
+        System.out.println(ipToLong("127.0.0.1"));
+        System.out.println(longToIP(2130706433));
     }
+
+    /**
+     * 将 ip 字符串转换为 int 类型的数字
+     * <p>
+     * 思路就是将 ip 的每一段数字转为 8 位二进制数，并将它们放在结果的适当位置上
+     *
+     * @param ipString ip字符串，如 255.255.255.255
+     *                 00000000 00000000 00000000 00000000
+     *                 00000000 00000000 00000000 11111111
+     *                 ------------或运算------------
+     *                 00000000 00000000 00000000 11111111
+     *                 00000000 00000000 11111111 00000000
+     *                 ------------或运算------------
+     *                 00000000 00000000 11111111 11111111
+     *                 00000000 11111111 00000000 00000000
+     *                 ------------或运算------------
+     *                 00000000 11111111 11111111 11111111
+     *                 11111111 00000000 00000000 00000000
+     *                 -----------最终结果------------
+     *                 11111111 11111111 11111111 11111111
+     * @return ip字符串对应的 int 值
+     */
+    public static int ip2Int(String ipString) {
+        // 取 ip 的各段
+        String[] ipSlices = ipString.split("\\.");
+        int rs = 0;
+        for (int i = 0; i < ipSlices.length; i++) {
+            // 将 ip 的每一段解析为 int，并根据位置左移 8 位
+            int intSlice = Integer.parseInt(ipSlices[i]) << (8 * i);
+            // 求或
+            rs = rs | intSlice;
+        }
+        return rs;
+    }
+
+    public static String intToIp(int ipInt) {
+        StringBuffer sb = new StringBuffer("");
+        sb.append((ipInt & 255));
+        sb.append(".");
+        sb.append((ipInt & 255) >>> 8);
+        sb.append(".");
+        sb.append((ipInt & 255) >>> 16);
+        sb.append(".");
+        //右移24位
+        sb.append((ipInt >>> 24));
+        return sb.toString();
+    }
+
+    public static String longToIP(long longIp) {
+        StringBuffer sb = new StringBuffer("");
+        // 直接右移24位
+        sb.append((longIp >>> 24));
+        sb.append(".");
+        // 将高8位置0，然后右移16位
+        sb.append((longIp & 0x00FFFFFF) >>> 16);
+        sb.append(".");
+        // 将高16位置0，然后右移8位
+        sb.append((longIp & 0x0000FFFF) >>> 8);
+        sb.append(".");
+        // 将高24位置0
+        sb.append((longIp & 0x000000FF));
+        return sb.toString();
+    }
+
+    public static long ipToLong(String strIp) {
+        long[] ip = new long[4];
+        // 先找到IP地址字符串中.的位置
+        int position1 = strIp.indexOf(".");
+        int position2 = strIp.indexOf(".", position1 + 1);
+        int position3 = strIp.indexOf(".", position2 + 1);
+        // 将每个.之间的字符串转换成整型
+        ip[0] = Long.parseLong(strIp.substring(0, position1));
+        ip[1] = Long.parseLong(strIp.substring(position1 + 1, position2));
+        ip[2] = Long.parseLong(strIp.substring(position2 + 1, position3));
+        ip[3] = Long.parseLong(strIp.substring(position3 + 1));
+        return (ip[0] << 24) + (ip[1] << 16) + (ip[2] << 8) + ip[3];
+    }
+
 }

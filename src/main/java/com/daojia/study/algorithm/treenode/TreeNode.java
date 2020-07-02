@@ -1,5 +1,7 @@
 package com.daojia.study.algorithm.treenode;
 
+import com.daojia.study.algorithm.listnode.ListNode;
+
 /**
  * @author xiachao
  * @since 2020/6/10 17:09

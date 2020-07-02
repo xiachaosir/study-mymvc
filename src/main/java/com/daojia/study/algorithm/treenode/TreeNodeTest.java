@@ -1,6 +1,7 @@
 package com.daojia.study.algorithm.treenode;
 
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 import java.util.Stack;
 
@@ -9,6 +10,10 @@ import java.util.Stack;
  * @since 2020/6/10 16:20
  */
 public class TreeNodeTest {
+
+    private static List<Integer> dataList = new LinkedList<>();
+
+    private static NodeOp nodeOp = new NodeOp();
 
     public void preOrderTraverse2(TreeNode root) {
         Stack<TreeNode> stack = new Stack<>();
@@ -38,6 +43,12 @@ public class TreeNodeTest {
         return A;
     }
 
+    /**
+     * 前序 ： 根 左 右
+     * 中序 ： 左 根 右
+     * 后序 ： 左 右 根
+     */
+
     //前序
     public static void frontTraverse(TreeNode root) {
         if (root != null) {
@@ -59,9 +70,10 @@ public class TreeNodeTest {
     //后序
     public static void behindTraverse(TreeNode root) {
         if (root != null) {
-            frontTraverse(root.getLeft());
-            frontTraverse(root.getRight());
+            behindTraverse(root.getLeft());
+            behindTraverse(root.getRight());
             System.out.print(root.getValue() + ">");
+            nodeOp.add(root.getValue() + "");
         }
     }
 
@@ -87,14 +99,26 @@ public class TreeNodeTest {
 
     public static void main(String[] args) {
         TreeNode root = TreeNodeTest.init();
-        System.out.println(root);
+        /*System.out.println(root);
         frontTraverse(root);
         System.out.println("");
         middleTraverse(root);
-        System.out.println("");
+        System.out.println("");*/
         behindTraverse(root);
-        System.out.println("");
-        levelOrderTraverse(root);
+        System.out.println("-----");
+        for (int i = 0; i < dataList.size(); i++) {
+            System.out.print(dataList.get(i));
+        }
+        nodeOp.getFirst().prev = nodeOp.getLast();
+        nodeOp.getLast().next = nodeOp.getFirst();
+
+        System.out.println(nodeOp.getFirst().getData());
+
+        //System.out.println(nodeOp);
+
+        /*System.out.println(dl.getFirst());
+        System.out.println("");*/
+        //levelOrderTraverse(root);
 
     }
 
