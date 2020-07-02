@@ -53,20 +53,6 @@ public class Solution {
         }
         return arr[arr.length - k];
     }
-    public static int findK(int[] arr, int k) {
-        int s = 0;
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = i + 1; j < arr.length; j++) {
-                if (arr[i] < arr[i]) {
-                    int tmp = arr[j];
-                    arr[i] = arr[j];
-                    arr[j] = tmp;
-                }
-            }
-            if (s++ >= k) break;
-        }
-        return arr[arr.length - k];
-    }
 
     /**
      * 用PriorityQueue实现选择最小的k个数
@@ -150,10 +136,10 @@ public class Solution {
         String[] arr = { "{", "}"};
         System.out.println(dealKuohao(arr));
 
-        int[] arr = {3, 1, 4, 2, 6};
-        System.out.println(findK(arr, 5));
+        int[] arr1 = {3, 1, 4, 2, 6};
+        System.out.println(findK(arr1, 5));
 
-        System.out.println(findKQueue(arr, 5));
+        System.out.println(findKQueue(arr1, 5));
 
         int[] nums1 = {1, 2};
         int[] nums2 = {3, 4};
