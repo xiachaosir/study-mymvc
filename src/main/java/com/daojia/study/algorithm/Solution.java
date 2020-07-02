@@ -1,6 +1,5 @@
 package com.daojia.study.algorithm;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -22,7 +21,6 @@ public class Solution {
     //最长公共前缀
 
     private static String commonPrefix(String[] str) {
-
         Arrays.sort(str);
         int length = str[0].length();
         String s = str[str.length - 1];
@@ -175,6 +173,135 @@ public class Solution {
             return right;
 
     }
+
+    public static int MaxSum(int n, int[] a) {
+        int sum = 0;
+        int b = 0;
+        for (int i = 1; i <= n; i++) {
+            if (b > 0) {
+                b += a[i];
+            } else {
+                b = a[i];
+            }
+            if (b > sum) sum = b;
+        }
+        return sum;
+    }
+
+
+    /**
+     * 5. 最长回文子串
+     * 给定一个字符串 s，找到 s 中最长的回文子串。你可以假设 s 的最大长度为 1000。
+     * 输入: "babad"
+     * 输出: "bab"
+     * 注意: "aba" 也是一个有效答案。
+     */
+    public static String maxHuiwen(String s) {
+        int maxLength = 1;
+        int begin = 0;
+        int length = s.length();
+        for (int i = 0; i < length; i++) {
+            for (int j = i + 1; j < length; j++) {
+                if (j - i + 1 > maxLength && isHuiwen(s, i, j)) {
+                    maxLength = j - i + 1;
+                    begin = i;
+                }
+            }
+
+        }
+        return s.substring(begin, begin + maxLength);
+    }
+
+    public static boolean isHuiwen(String s, int i, int j) {
+        while (i < j) {
+            if (s.charAt(i) != s.charAt(j)) {
+                return false;
+            }
+            i++;
+            j--;
+        }
+        return true;
+    }
+
+    /**
+     * 7. 整数反转
+     */
+    public static int reverse(int x) {
+        int result = 0;
+        while (x != 0) {
+            int tmp = x % 10;
+            //判断是否 大于 最大32位整数
+            if (result > (Math.pow(2, 31) - 1) / 10 || (result == (Math.pow(2, 31) - 1) / 10 && tmp > 7)) {
+                return 0;
+            }
+            //判断是否 小于 最小32位整数
+            if (result < -(Math.pow(2, 31) - 1) / 10 || (result == -(Math.pow(2, 31) - 1) / 10 && tmp < -8)) {
+                return 0;
+            }
+            result = result * 10 + tmp;
+            x = x / 10;
+        }
+        return result;
+    }
+
+    /**
+     * 8. 字符串转换整数 (atoi)
+     */
+    public static int myAtoi(String str) {
+        char[] charArray = str.toCharArray();
+        //先处理空白符号
+        int begin = 0;
+        while (begin < charArray.length && charArray[begin] == ' ') {
+            begin++;
+        }
+        if (begin == charArray.length)
+            return 0;
+        //再处理正负号
+        int flag = 1;
+        if (charArray[begin] == '+') {
+            begin++;
+        } else if (charArray[begin] == '-') {
+            begin++;
+            flag = -1;
+        } else if (!Character.isDigit(charArray[begin])) {
+            return 0;
+        }
+        //最后通过 ans*10 + 当前数字
+        int result = 0;
+        while (begin < charArray.length && Character.isDigit(charArray[begin])) {
+            if (result > (Integer.MAX_VALUE - (charArray[begin] - '0')) / 10) {
+                return flag > 0 ? Integer.MAX_VALUE : Integer.MIN_VALUE;
+            }
+            result = result * 10 + (charArray[begin] - '0');
+            begin++;
+        }
+        return flag > 0 ? result : -result;
+    }
+
+    /**
+     * 9. 回文数 判断一个整数是否是回文数。回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。
+     * 输入: 121
+     * 输出: true
+     */
+    public boolean isPalindrome(int x) {
+        if (x < 0) return false;
+        int div = 1;
+        int tmp = x;
+        while (tmp / 10 != 0) {
+            div *= 10;
+            tmp = tmp / 10;
+        }
+        int leftx = x;
+        while (x != 0) {
+            int left = leftx / div % 10;
+            int right = x % 10;
+            if (left != right) return false;
+            div = div / 10;
+            x = x / 10;
+        }
+        return true;
+    }
+
 
 
 }
