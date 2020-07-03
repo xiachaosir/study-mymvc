@@ -25,7 +25,7 @@ public class Worker {
             if (number != 1) {
                 condition1.await();
             }
-            System.out.print(Thread.currentThread().getName());
+            System.out.print("A");
             number = 2;
             condition2.signal();
         } catch (InterruptedException e) {
@@ -42,7 +42,7 @@ public class Worker {
             if (number != 2) {
                 condition2.await();
             }
-            System.out.print(Thread.currentThread().getName());
+            System.out.print("B");
             number = 3;
             condition3.signal();
         } catch (InterruptedException e) {
@@ -58,7 +58,7 @@ public class Worker {
             if (number != 3) {
                 condition3.await();
             }
-            System.out.print(Thread.currentThread().getName());
+            System.out.print("C");
             number = 1;
             condition1.signal();
         } catch (InterruptedException e) {
@@ -66,6 +66,17 @@ public class Worker {
         } finally {
             lock.unlock();
         }
+    }
+
+    public static void main(String[] args) {
+        Worker worker = new Worker();
+
+        for (int i = 0; i < 10; i++) {
+            worker.loopA();
+            worker.loopB();
+            worker.loopC();
+        }
+
     }
 
 

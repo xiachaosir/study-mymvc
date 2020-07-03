@@ -32,19 +32,42 @@ public class ListNodeAdd {
     public static void main(String[] args) {
 
         System.out.println(lengthOfLongestSubstring("abcdfec"));
-       /* ListNode listNode1 = new ListNode(3);
+       ListNode listNode1 = new ListNode(3);
         ListNode listNode2 = new ListNode(4);
         ListNode listNode3 = new ListNode(7);
         listNode1.next = listNode2;
         listNode2.next = listNode3;
-
-        ListNode listNode4 = new ListNode(6);
+        System.out.println(reverse(listNode1));
+       /* ListNode listNode4 = new ListNode(6);
         ListNode listNode5 = new ListNode(8);
         ListNode listNode6 = new ListNode(1);
         listNode4.next = listNode5;
-        listNode5.next = listNode6;
+        listNode5.next = listNode6;*/
 
-        System.out.println(addTwoNumbers(listNode1, listNode4));*/
+
+    }
+
+    /**
+     *
+     * 3 -> 7 -> 4
+     *
+     *  0 -> 3
+     *  0 -> 4 - > 3
+     *  0 -> 7 -> 4 ->3
+     */
+
+    public static ListNode reverse(ListNode head) {
+        ListNode pre = new ListNode(0);
+        ListNode cur = head;
+
+        while (cur!= null) {
+            ListNode next = cur.next; //保存要插入的节点
+            cur.next = pre.next;  //当前插入到pre中
+            pre.next = cur;  //纠正pre的指向
+            cur = next;
+        }
+        return pre.next;
+
     }
 
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
