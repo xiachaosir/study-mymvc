@@ -28,7 +28,6 @@ public class LargeNumber {
             sum += mint + nint;
             resultInt[i] = sum;
             if (sum >= 10) {
-                resultInt[i + 1] += 1;
                 resultInt[i] %= 10;
             }
             sum = sum / 10;
@@ -47,6 +46,7 @@ public class LargeNumber {
     }
 
     public static String sub(String m, String n) {
+        new StringBuffer(m).reverse().toString().toCharArray();
 
         return "";
     }
@@ -116,11 +116,11 @@ public class LargeNumber {
     }
 
     public static void main(String[] args) {
-        //System.out.println(LargeNumber.add("1", "2"));
-        System.out.println(ip2Int("127.0.0.1"));
-        System.out.println(intToIp(16777343));
-        System.out.println(ipToLong("127.0.0.1"));
-        System.out.println(longToIP(2130706433));
+        System.out.println(LargeNumber.add("18", "198"));
+        //System.out.println(ip2Int("127.0.0.1"));
+        //System.out.println(intToIp(16777343));
+        //System.out.println(ipToLong("127.0.0.1"));
+        //System.out.println(longToIP(2130706433));
     }
 
     /**

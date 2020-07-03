@@ -103,7 +103,6 @@ public class ListNodeTest {
                 pre = cur;
                 cur = next;
             }
-
             if (i != 0) {
                 tail.next = pre;
                 tail = tmp;
@@ -112,13 +111,10 @@ public class ListNodeTest {
                 ans = pre;
             }
         }
-
         if (remainder != 0) {
             if (tail != null) tail.next = cur;
         }
-
         if (null == ans) ans = head;
-
         return ans;
     }
 
