@@ -21,6 +21,18 @@ public class NodeOp {
         return true;
     }
 
+   /* public boolean addNode(TreeNode root) {
+        Node newNode = root;
+        if (this.first == null) {
+            this.first = newNode;
+        } else {
+            this.last.next = newNode;
+        }
+        this.last = newNode;
+        return true;
+    }*/
+
+
     public Node getFirst() {
         return first;
     }

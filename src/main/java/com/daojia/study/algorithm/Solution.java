@@ -1,15 +1,8 @@
 package com.daojia.study.algorithm;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.PriorityQueue;
 import java.util.Queue;
-import java.util.Comparator;
-import java.util.PriorityQueue;
-import java.util.Queue;
-import java.util.Stack;
 import java.util.concurrent.LinkedBlockingQueue;
 
 /**
@@ -89,30 +82,32 @@ public class Solution {
         return res;
     }
 
-    private static Map<String, String> map = new HashMap<>();
+    private static final Map<Character, Character> mappings = new HashMap<Character, Character>() {{
+        put(')', '(');
+        put('}', '{');
+        put(']', '[');
+    }};
 
-    static {
-        map.put("]", "[");
-        map.put("}", "{");
-    }
-
-    public static boolean dealKuohao(String[] str) {
-
-        Stack<String> stack = new Stack<>();
-
-        for (int i = 0; i < str.length; i++) {
-            String s = str[i];
-            if (map.containsKey(s)) {
-
-                if (!s.equals(map.get(s))) {
+    public static boolean isValid(String s) {
+        // Initialize a stack to be used in the algorithm.
+        Stack<Character> stack = new Stack<Character>();
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            // If the current character is a closing bracket.
+            if (mappings.containsKey(c)) {
+                // Get the top element of the stack. If the stack is empty, set a dummy value of '#'
+                char topElement = stack.empty() ? '#' : stack.pop();
+                // If the mapping for this bracket doesn't match the stack's top element, return false.
+                if (topElement != mappings.get(c)) {
                     return false;
                 }
-
             } else {
-                stack.push(s);
+                // If it was an opening bracket, push to the stack.
+                stack.push(c);
             }
         }
-        return stack.empty();
+        // If the stack still contains elements, then it is an invalid expression.
+        return stack.isEmpty();
     }
 
     /**
@@ -130,11 +125,43 @@ public class Solution {
     }
 
 
+    public static int removeDuplicates(int[] nums) {
+        if (nums.length == 0) return 0;
+        //快慢指针 不相等就把后面的给前面的值
+        int i = 0;
+        for (int j = 1; j < nums.length; j++) {
+            if (nums[j] != nums[i]) {
+                i++;
+                nums[i] = nums[j];
+            }
+        }
+        return i + 1;
+    }
+
+    private static String str = "wwww";
+
+    public Solution() {
+        System.out.println("构造方法初始化");
+    }
+
+    static {
+        System.out.println("静态代码快");
+    }
+
+    public static void  eyeu() {
+        System.out.println("静态方法初始化");
+    }
+
+
     public static void main(String[] args) {
-        /*String[] str = {"flower", "flow", "floweght"};
-        System.out.println(commonPrefix(str));*/
-        String[] arr = {"{", "}"};
-        System.out.println(dealKuohao(arr));
+        Solution solution = new Solution();
+
+       /* int[] nums = {1, 2, 3, 3, 4};
+        System.out.println(removeDuplicates(nums));
+
+        *//*String[] str = {"flower", "flow", "floweght"};
+        System.out.println(commonPrefix(str));*//*
+        System.out.println(isValid("()]{}"));
 
         int[] arr1 = {3, 1, 4, 2, 6};
         System.out.println(findK(arr1, 5));
@@ -143,7 +170,8 @@ public class Solution {
 
         int[] nums1 = {1, 2};
         int[] nums2 = {3, 4};
-        System.out.println(findMedianSortedArrays(nums1, nums2));
+        System.out.println(findMedianSortedArrays(nums1, nums2));*/
+
     }
 
     /**
@@ -212,6 +240,7 @@ public class Solution {
         }
         return s.substring(begin, begin + maxLength);
     }
+
 
     public static boolean isHuiwen(String s, int i, int j) {
         while (i < j) {
@@ -303,6 +332,22 @@ public class Solution {
         return true;
     }
 
+    public String longestCommonPrefix(String[] strs) {
+        if (strs == null || strs.length == 0) {
+            return "";
+        }
+        int length = strs[0].length();
+        int count = strs.length;
+        for (int i = 0; i < length; i++) {
+            char c = strs[0].charAt(i);
+            for (int j = 1; j < count; j++) {
+                if (i == strs[j].length() || strs[j].charAt(i) != c) {
+                    return strs[0].substring(0, i);
+                }
+            }
+        }
+        return strs[0];
+    }
 
 
 

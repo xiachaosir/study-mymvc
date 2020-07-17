@@ -1,9 +1,6 @@
 package com.daojia.study.algorithm.treenode;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
-import java.util.Stack;
+import java.util.*;
 
 /**
  * @author xiachao
@@ -96,14 +93,74 @@ public class TreeNodeTest {
         }
     }
 
+    public static void printTree(TreeNode root) {
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+        TreeNode last = root;  //表示当前遍历层最右结点
+        TreeNode nlast = root; //表示下一层最右结点
+        //遍历时，每次将nlast指向插入队列元素，最后一个插入结点时即最右结点。
+        // 插入左右孩子之后，检测last是否为当前输出结点，若是，则表示需要进行换行，并将last指向下一层的nlast。
+        while (!queue.isEmpty()) {
+            TreeNode t = queue.peek();
+            System.out.print(queue.poll().getValue() + " ");
+            if (t.getLeft() != null) {
+                queue.add(t.getLeft());
+                nlast = t.getLeft();
+            }
+            if (t.getRight() != null) {
+                queue.add(t.getRight());
+                nlast = t.getRight();
+            }
+            // 如果当前输出结点是最右结点，那么换行
+            if (last == t) {
+                System.out.println();
+                last = nlast;
+            }
+        }
+    }
+
+    // 获取最大宽度
+    public static int getMaxWidth(TreeNode root) {
+        if (root == null)
+            return 0;
+        Queue<TreeNode> queue = new ArrayDeque<TreeNode>();
+        int maxWitdth = 1; // 最大宽度
+        queue.add(root); // 入队
+        int count = 0;
+
+        while (true) {
+            int len = queue.size(); // 当前层的节点个数
+            if (len == 0)
+                break;
+            while (len > 0) {// 如果当前层，还有节点1122
+                TreeNode t = queue.poll();
+                len--;
+                if (t.getLeft() != null)
+                    queue.add(t.getLeft()); // 下一层节点入队
+                if (t.getRight() != null)
+                    queue.add(t.getRight());// 下一层节点入队
+            }
+            count++;
+            if(count == 2) {
+                System.out.println("第二层节点数=" + count);
+            }
+            maxWitdth = Math.max(maxWitdth, queue.size());
+        }
+        return maxWitdth;
+    }
+
 
     public static void main(String[] args) {
         TreeNode root = TreeNodeTest.init();
+        printTree(root);
         /*System.out.println(root);
         frontTraverse(root);
         System.out.println("");
         middleTraverse(root);
         System.out.println("");*/
+
+        System.out.println(getMaxWidth(root));
+
         behindTraverse(root);
         System.out.println("-----");
         for (int i = 0; i < dataList.size(); i++) {

@@ -21,7 +21,6 @@ public class FullPermutation {
     }
 
     static void arrange(int a[], int start, int end) {
-
         //停止
         if (start == end) {
             for (int i : a) {

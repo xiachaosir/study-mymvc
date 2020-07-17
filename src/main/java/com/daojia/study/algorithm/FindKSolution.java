@@ -1,4 +1,4 @@
-package com.daojia.study;
+package com.daojia.study.algorithm;
 
 /*
    两个正序排序的数组，求合并后的第K个。两个数组内元素没有 0，找不到第 K 个数可以返回 0。

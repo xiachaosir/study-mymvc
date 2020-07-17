@@ -8,11 +8,11 @@ import com.daojia.study.algorithm.listnode.ListNode;
  */
 public class TreeNode {
 
-    private int value;
+    public int value;
 
-    private TreeNode left;
+    public TreeNode left;
 
-    private TreeNode right;
+    public TreeNode right;
 
     public TreeNode(int value, TreeNode left, TreeNode right) {
         this.value = value;
